@@ -1,0 +1,1 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><info>	<infoitem key="UD_rsExames" value="name:EXA_COD;datatype:int,name:EXA_NOME;datatype:string,name:EXA_SIGLA;datatype:string,name:EXA_TAGS;datatype:string,name:EXA_ORIENTACOES;datatype:blob,name:EXA_AGENDAMENTO;datatype:int,name:EXA_STATUS;datatype:int" /></info>
