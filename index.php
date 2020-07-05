@@ -480,14 +480,14 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
 
                             <div class="dropdown-menu dropdown-menu-xl py-0 px-0 overflow--hidden" aria-labelledby="navbar_1_dropdown_1">
                                 <div class="list-group rounded">
-                                    <a href="/sobre/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="./sobre/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Nosso Propósito</div>
                                             <p class="text-sm mb-0">Conheça a trajetória do CDL</p>
                                         </div>
                                     </a>
 
-                                    <a href="/estrutura/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="./estrutura/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Estrutura</div>
                                             <p class="text-sm mb-0">Navegue pela nossa estrutura</p>
@@ -507,21 +507,21 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
 
                             <div class="dropdown-menu dropdown-menu-xl py-0 px-0 overflow--hidden" aria-labelledby="navbar_1_dropdown_1">
                                 <div class="list-group rounded">
-                                    <a href="/exames/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="./exames/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Exames</div>
                                             <p class="text-sm mb-0">Dispomos de uma lista completa de exames.</p>
                                         </div>
                                     </a>
 
-                                    <a href="/checkup/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="./checkup/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Check-ups</div>
                                             <p class="text-sm mb-0">Conheça e agende seu chekup conosco.</p>
                                         </div>
                                     </a>
 
-                                    <a href="/coleta-domiciliar/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="./coleta-domiciliar/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Coleta Domiciliar</div>
                                             <p class="text-sm mb-0">Você faz diversos tipos de exames sem sair do conforto da sua casa.</p>
@@ -529,7 +529,7 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
                                     </a>
 
 
-                                    <a href="/convenios/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="./convenios/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Convênios</div>
                                             <p class="text-sm mb-0">Somos credenciados pelos principais planos de saúde e empresas de Manaus.</p>
@@ -545,9 +545,9 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
                         <!-- /dropdown -->
 
                           <li class="nav-item dropdown megamenu"> <a class="nav-link" href="http://186.208.254.229:8081/" target="_blank"> Resultados</a> </li>
-                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="/unidades/"> Unidades </a> </li>
-                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="/blog/"> Blog </a> </li>
-                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="/contato/"> Contato </a> </li>
+                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="./unidades/"> Unidades </a> </li>
+                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="./blog/"> Blog </a> </li>
+                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="./contato/"> Contato </a> </li>
                         </ul>
                         <!-- /Navbar links -->
 
@@ -562,7 +562,7 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
 
 
 <div class="pl-4 d-none d-lg-inline-block">
-    <a href="/contato/" class="btn btn-styled btn-sm btn-base-1 text-uppercase btn-circle" target="_blank">
+    <a href="./contato/" class="btn btn-styled btn-sm btn-base-1 text-uppercase btn-circle" target="_blank">
         Fale com o CDL
             </a>
 </div>
@@ -579,7 +579,7 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
           <?php do { ?>
             <!-- slide -->
             <div class="swiper-slide" data-swiper-autoplay="8000">
-              <div class="slice holder-item holder-item-light has-bg-cover bg-size-cover" style="background-image: url(images/content/publicidade/3.jpg); background-position: bottom center;">
+              <div class="slice holder-item holder-item-light has-bg-cover bg-size-cover" style="background-image: url(images/content/publicidade/2.jpg); background-position: bottom center;">
                 <span class="mask mask-dark--style-2"></span>
                 <div class="container d-flex align-items-center">
                   <div class="col">
@@ -709,10 +709,10 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
                                             <i class="ion-tshirt-outline"></i>
                                         </div>
                                         <h2 class="heading heading-4 strong-500 c-white">Convênios</h2>
-                                        <p class="px-4 c-white">
+                                        <p class="px-4 c-white" style="text-align: center;">
                                             Veja se sua empresa é conveniada ao CDL.
                                         </p>
-                                        <a href="/convenios/" class="btn btn-styled btn-xs btn-base-3">Lista completa</a>
+                                        <a href="./convenios/" class="btn btn-styled btn-xs btn-base-3">Lista completa</a>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
@@ -721,10 +721,10 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
                                             <i class="ion-settings"></i>
                                         </div>
                                         <h2 class="heading heading-4 strong-500 c-white">Exames</h2>
-                                        <p class="px-4 c-white">
+                                        <p class="px-4 c-white" style="text-align: center;">
                                             Lista completa de exames.
                                         </p>
-                                        <a href="/exames/" class="btn btn-styled btn-xs btn-base-3">Lista completa</a>
+                                        <a href="./exames/" class="btn btn-styled btn-xs btn-base-3">Lista completa</a>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
@@ -733,7 +733,7 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
                                             <i class="ion-ios-chatboxes-outline"></i>
                                         </div>
                                         <h2 class="heading heading-4 strong-500 c-white">Resultados de Exames</h2>
-                                        <p class="px-4 c-white">
+                                        <p class="px-4 c-white" style="text-align: center;">
                                             Verifique o resultado do seus exames.
                                         </p>
                                         <a href="http://186.208.254.229:8081/" target="_blank" class="btn btn-styled btn-xs btn-base-3">Acesse aqui</a>
@@ -1107,11 +1107,11 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
                        </h4>
 
                        <ul class="footer-links">
-                            <li><a href="../index.html" title="Help center">Home</a></li>
-                            <li><a href="/sobre/" title="Nosso Propósito">Nosso Prop&oacute;sito</a></li>
-                            <li><a href="/unidades/" title="Conheça nossas unidades em Manaus">Unidades CDL</a></li>
-                            <li><a href="/blog/" title="Blog">Blog</a></li>
-                            <li><a href="/contato/" title="Contato">Contato</a></li>
+                            <li><a href="./index.php" title="Help center">Home</a></li>
+                            <li><a href="./sobre/" title="Nosso Propósito">Nosso Prop&oacute;sito</a></li>
+                            <li><a href="./unidades/" title="Conheça nossas unidades em Manaus">Unidades CDL</a></li>
+                            <li><a href="./blog/" title="Blog">Blog</a></li>
+                            <li><a href="./contato/" title="Contato">Contato</a></li>
                         </ul>
                      </div>
                 </div>
@@ -1124,22 +1124,22 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
 
                         <ul class="footer-links">
                              <li>
-                                 <a href="#" title="Lista de todos nossos exames">
+                                 <a href="./exames/" title="Lista de todos nossos exames">
                                      Exames
                                  </a>
                              </li>
                              <li>
-                                 <a href="/checkups/" title="Checkups">
+                                 <a href="./checkups/" title="Checkups">
                                      Checkups
                                  </a>
                              </li>
                              <li>
-                                 <a href="/convenios/" title="Convênios">
+                                 <a href="./convenios/" title="Convênios">
                                      Conv&ecirc;nios
                                  </a>
                              </li>
                              <li>
-                                 <a href="#" title="Coleta Domiciliar">
+                                 <a href="./coleta-domiciliar" title="Coleta Domiciliar">
                                      Coleta Domiciliar
                                  </a>
                              </li>
@@ -1237,13 +1237,13 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
 </body>
 </html>
 <?php
-mysql_free_result($rsEquipe);
+mysqli_free_result($rsEquipe);
 
-mysql_free_result($rsConvenios);
+mysqli_free_result($rsConvenios);
 
-mysql_free_result($rsUnidades);
+mysqli_free_result($rsUnidades);
 
-mysql_free_result($rsDepomeimentos);
+mysqli_free_result($rsDepomeimentos);
 
-mysql_free_result($rsPublicidade);
+mysqli_free_result($rsPublicidade);
 ?>

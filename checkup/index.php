@@ -33,7 +33,7 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 
 mysqli_select_db($conn92ID, $database_conn92ID);
-$query_rsCheckups = "SELECT * FROM vw_produtos_servicos_tipo WHERE PRD_COD = 1";
+$query_rsCheckups = "SELECT * FROM tb_produtos_servicos";
 $rsCheckups = mysqli_query($conn92ID, $query_rsCheckups) or die(mysqli_error($conn92ID));
 $row_rsCheckups = mysqli_fetch_assoc($rsCheckups);
 $totalRows_rsCheckups = mysqli_num_rows($rsCheckups);
@@ -50,7 +50,7 @@ $totalRows_rsCheckups = mysqli_num_rows($rsCheckups);
 <meta name="keywords" content="laborat?io, laborat?ios, exames, m?icos, cl?icas, sa?de, hospitais, medicina, manaus, amazonas">
 <meta name="author" content="92dpi.ag">
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Checkups ? CDL Laborat?ios Santos e Vidal - Manaus / Amazonas</title>
+<title>Checkups « CDL Laborat?ios Santos e Vidal - Manaus / Amazonas</title>
 <!-- InstanceEndEditable -->
 <!-- Bootstrap -->
 <link rel="stylesheet" href="../content/assets/vendor/bootstrap/css/bootstrap.min.css" type="text/css">
@@ -174,14 +174,14 @@ $totalRows_rsCheckups = mysqli_num_rows($rsCheckups);
 
                             <div class="dropdown-menu dropdown-menu-xl py-0 px-0 overflow--hidden" aria-labelledby="navbar_1_dropdown_1">
                                 <div class="list-group rounded">
-                                    <a href="/sobre/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../sobre/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Nosso Propósito</div>
                                             <p class="text-sm mb-0">Conheça a trajetória do CDL</p>
                                         </div>
                                     </a>
 
-                                    <a href="/estrutura/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../estrutura/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Estrutura</div>
                                             <p class="text-sm mb-0">Navegue pela nossa estrutura</p>
@@ -201,21 +201,21 @@ $totalRows_rsCheckups = mysqli_num_rows($rsCheckups);
 
                             <div class="dropdown-menu dropdown-menu-xl py-0 px-0 overflow--hidden" aria-labelledby="navbar_1_dropdown_1">
                                 <div class="list-group rounded">
-                                    <a href="/exames/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../exames/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Exames</div>
                                             <p class="text-sm mb-0">Dispomos de uma lista completa de exames.</p>
                                         </div>
                                     </a>
 
-                                    <a href="/checkup/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../checkup" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Check-ups</div>
                                             <p class="text-sm mb-0">Conheça e agende seu chekup conosco.</p>
                                         </div>
                                     </a>
 
-                                    <a href="/coleta-domiciliar/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../coleta-domiciliar/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Coleta Domiciliar</div>
                                             <p class="text-sm mb-0">Você faz diversos tipos de exames sem sair do conforto da sua casa.</p>
@@ -223,16 +223,12 @@ $totalRows_rsCheckups = mysqli_num_rows($rsCheckups);
                                     </a>
 
 
-                                    <a href="/convenios/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../convenios/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Convênios</div>
                                             <p class="text-sm mb-0">Somos credenciados pelos principais planos de sa?de e empresas de Manaus.</p>
                                         </div>
                                     </a>
-
-
-
-                                    
                                 </div>
                             </div>
                         </li>
@@ -241,9 +237,9 @@ $totalRows_rsCheckups = mysqli_num_rows($rsCheckups);
                           
                           
                           <li class="nav-item dropdown megamenu"> <a class="nav-link" href="http://cdlaboratorio.dyndns.org:8081/" target="_blank"> Resultados </a> </li>
-                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="/unidades/"> Unidades </a> </li>
-                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="/blog/"> Blog </a> </li>
-                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="/contato/"> Contato </a> </li>
+                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="../unidades/"> Unidades </a> </li>
+                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="../blog/"> Blog </a> </li>
+                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="../contato/"> Contato </a> </li>
                         </ul>
                         <!-- /Navbar links -->
 
@@ -285,10 +281,6 @@ $totalRows_rsCheckups = mysqli_num_rows($rsCheckups);
                             <?php do { ?>
                             <!-- item_1 -->
                             
-
-                            
-
-
                             <div class="row align-items-center cols-xs-space cols-sm-space cols-md-space">
                                 <div class="col-lg-6">
                                     <div class="block block-image-holder">
@@ -300,8 +292,9 @@ $totalRows_rsCheckups = mysqli_num_rows($rsCheckups);
 
                                 <div class="col-lg-6">
                                     <div class="px-5 py-5">
-                                        <h3 class="heading heading-2 strong-500 text-normal mb-2">
-                                            <?php echo $row_rsCheckups['PRD_TITULO']; ?>                                       </h3>
+                                        <h3 class="heading heading-2 strong-500 text-normal mb-2">  
+                                            <?php echo isset($row_rsCheckups['PRD_TITULO']) ? $row_rsCheckups['PRD_TITULO'] : '' ; ?>      
+                                        </h3>
                                         <!-- <h3 class="heading heading-sm strong-300 text-normal mb-4">
                                             Aqui entra alguma observação ou nota
                                         </h3> -->
@@ -323,7 +316,7 @@ $totalRows_rsCheckups = mysqli_num_rows($rsCheckups);
                                                     <div role="tabpanel" class="tab-pane active" id="tabTwo-<?php echo $row_rsCheckups['PRD_COD']; ?>-1">
                                                         <div class="tab-body">
                                                             <p>
-                                                                <?php echo $row_rsCheckups['PRD_CORPO_HOME']; ?>
+                                                                <?php echo isset($row_rsCheckups['PRD_CORPO_HOME']) ? $row_rsCheckups['PRD_CORPO_HOME'] : '' ; ?>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -341,7 +334,7 @@ $totalRows_rsCheckups = mysqli_num_rows($rsCheckups);
 
                                        
 
-                                        <a href="/contato/" class="btn btn-base-1 btn-circle px-4 mt-5">Agendar Agora</a>
+                                        <a href="../contato/" class="btn btn-base-1 btn-circle px-4 mt-5">Agendar Agora</a>
                                     </div>
                                 </div>
                             </div>
@@ -349,7 +342,7 @@ $totalRows_rsCheckups = mysqli_num_rows($rsCheckups);
 
                             <span class="space-xs-xl"></span>
                             <!-- item_1 -->
-                            <?php } while ($row_rsCheckups = mysql_fetch_assoc($rsCheckups)); ?>
+                            <?php } while ($row_rsCheckups = mysqli_fetch_assoc($rsCheckups)); ?>
 
 
                         </div>
@@ -371,7 +364,7 @@ $totalRows_rsCheckups = mysqli_num_rows($rsCheckups);
                         <span class="clearfix"></span>
                         
                         <p class="mt-3">
-                            Uma hist?ia de pioneirismo, trabalho e dedicação iniciada por duas farmacêutica sem prol de oferecer à  população amazonense um laborat?io de anà¡lises clà­nicas e citol?icas que se destaca pela qualidade nos procedimentos e pelo atendimento humanizado e diferenciado.
+                            Uma históia de pioneirismo, trabalho e dedicação iniciada por duas farmacêutica sem prol de oferecer à população amazonense um laborat?io de anà¡lises clà­nicas e citol?icas que se destaca pela qualidade nos procedimentos e pelo atendimento humanizado e diferenciado.
                         </p>
 
                         <div class="copyright mt-4">
@@ -393,11 +386,11 @@ $totalRows_rsCheckups = mysqli_num_rows($rsCheckups);
                        </h4>
 
                        <ul class="footer-links">
-                            <li><a href="../index.html" title="Help center">Home</a></li>
-                            <li><a href="/sobre/" title="Nosso Prop?ito">Nosso Prop&oacute;sito</a></li>
-                            <li><a href="/unidades/" title="Conheça nossas unidades em Manaus">Unidades CDL</a></li>
-                            <li><a href="/blog/" title="Blog">Blog</a></li>
-                            <li><a href="/contato/" title="Contato">Contato</a></li>
+                            <li><a href="../index.php" title="Help center">Home</a></li>
+                            <li><a href="../sobre/" title="Nosso Prop?ito">Nosso Prop&oacute;sito</a></li>
+                            <li><a href="../unidades/" title="Conheça nossas unidades em Manaus">Unidades CDL</a></li>
+                            <li><a href="../blog/" title="Blog">Blog</a></li>
+                            <li><a href="../contato/" title="Contato">Contato</a></li>
                         </ul>
                      </div>
                 </div>
@@ -415,17 +408,17 @@ $totalRows_rsCheckups = mysqli_num_rows($rsCheckups);
                                  </a>
                              </li>
                              <li>
-                                 <a href="/checkups/" title="Checkups">
+                                 <a href="#" title="Checkups">
                                      Check Ups
                                  </a>
                              </li>
                              <li>
-                                 <a href="/convenios/" title="Convênios">
+                                 <a href="../convenios/" title="Convênios">
                                      Conv&ecirc;nios
                                  </a>
                              </li>
                              <li>
-                                 <a href="#" title="Coleta Domiciliar">
+                                 <a href=../coleta-domiciliar title="Coleta Domiciliar">
                                      Coleta Domiciliar
                                  </a>
                              </li>
@@ -526,5 +519,5 @@ $totalRows_rsCheckups = mysqli_num_rows($rsCheckups);
 </body>
 <!-- InstanceEnd --></html>
 <?php
-mysql_free_result($rsCheckups);
+mysqli_free_result($rsCheckups);
 ?>

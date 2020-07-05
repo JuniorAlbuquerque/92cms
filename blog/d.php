@@ -8,7 +8,18 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
     $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
   }
 
-  $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
+  $hostname_conn92ID = 'localhost';
+  $database_conn92ID = 'cdlmed_idcom';
+  $username_conn92ID = 'root';
+  $password_conn92ID = '';
+  ($conn92ID = mysqli_connect(
+      $hostname_conn92ID,
+      $username_conn92ID,
+      $password_conn92ID,
+      $database_conn92ID
+  )) or trigger_error(mysqli_error(), E_USER_ERROR);
+
+  $theValue = function_exists("mysqli_real_escape_string") ? mysqli_real_escape_string($conn92ID, $theValue) : mysqli_escape_string($conn92ID, $theValue);
 
   switch ($theType) {
     case "text":
@@ -36,11 +47,11 @@ $colname_rsBlog_Detail = "-1";
 if (isset($_GET['id'])) {
   $colname_rsBlog_Detail = $_GET['id'];
 }
-mysql_select_db($database_conn92ID, $conn92ID);
-$query_rsBlog_Detail = sprintf("SELECT * FROM vw_dicas_tipo WHERE DIC_COD = %s", GetSQLValueString($colname_rsBlog_Detail, "int"));
-$rsBlog_Detail = mysql_query($query_rsBlog_Detail, $conn92ID) or die(mysql_error());
-$row_rsBlog_Detail = mysql_fetch_assoc($rsBlog_Detail);
-$totalRows_rsBlog_Detail = mysql_num_rows($rsBlog_Detail);
+mysqli_select_db($conn92ID, $database_conn92ID);
+$query_rsBlog_Detail = sprintf("SELECT * FROM tb_dicas WHERE DIC_COD = %s", GetSQLValueString($colname_rsBlog_Detail, "int"));
+$rsBlog_Detail = mysqli_query($conn92ID, $query_rsBlog_Detail) or die(mysqli_error($conn92ID));
+$row_rsBlog_Detail = mysqli_fetch_assoc($rsBlog_Detail);
+$totalRows_rsBlog_Detail = mysqli_num_rows($rsBlog_Detail);
 
 $maxRows_rsBlog_Outros = 3;
 $pageNum_rsBlog_Outros = 0;
@@ -49,17 +60,17 @@ if (isset($_GET['pageNum_rsBlog_Outros'])) {
 }
 $startRow_rsBlog_Outros = $pageNum_rsBlog_Outros * $maxRows_rsBlog_Outros;
 
-mysql_select_db($database_conn92ID, $conn92ID);
-$query_rsBlog_Outros = "SELECT * FROM vw_dicas_tipo WHERE DIC_STATUS = 1";
+mysqli_select_db($conn92ID, $database_conn92ID);
+$query_rsBlog_Outros = "SELECT * FROM tb_dicas WHERE DIC_STATUS = 1";
 $query_limit_rsBlog_Outros = sprintf("%s LIMIT %d, %d", $query_rsBlog_Outros, $startRow_rsBlog_Outros, $maxRows_rsBlog_Outros);
-$rsBlog_Outros = mysql_query($query_limit_rsBlog_Outros, $conn92ID) or die(mysql_error());
-$row_rsBlog_Outros = mysql_fetch_assoc($rsBlog_Outros);
+$rsBlog_Outros = mysqli_query($conn92ID, $query_limit_rsBlog_Outros) or die(mysqli_error($conn92ID));
+$row_rsBlog_Outros = mysqli_fetch_assoc($rsBlog_Outros);
 
 if (isset($_GET['totalRows_rsBlog_Outros'])) {
   $totalRows_rsBlog_Outros = $_GET['totalRows_rsBlog_Outros'];
 } else {
-  $all_rsBlog_Outros = mysql_query($query_rsBlog_Outros);
-  $totalRows_rsBlog_Outros = mysql_num_rows($all_rsBlog_Outros);
+  $all_rsBlog_Outros = mysqli_query($conn92ID, $query_rsBlog_Outros);
+  $totalRows_rsBlog_Outros = mysqli_num_rows($all_rsBlog_Outros);
 }
 $totalPages_rsBlog_Outros = ceil($totalRows_rsBlog_Outros/$maxRows_rsBlog_Outros)-1;
 ?>
@@ -187,8 +198,8 @@ $totalPages_rsBlog_Outros = ceil($totalRows_rsBlog_Outros/$maxRows_rsBlog_Outros
                         </div>
 
 
-                        <!-- Navbar links -->
-                        <ul class="navbar-nav">
+                         <!-- Navbar links -->
+                         <ul class="navbar-nav">
                           <li class="nav-item dropdown megamenu"> <a class="nav-link" href="../index.php"> Home </a> </li>
 
                         <!-- dropdown -->
@@ -199,14 +210,14 @@ $totalPages_rsBlog_Outros = ceil($totalRows_rsBlog_Outros/$maxRows_rsBlog_Outros
 
                             <div class="dropdown-menu dropdown-menu-xl py-0 px-0 overflow--hidden" aria-labelledby="navbar_1_dropdown_1">
                                 <div class="list-group rounded">
-                                    <a href="/sobre/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../sobre/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Nosso Propósito</div>
                                             <p class="text-sm mb-0">Conheça a trajetória do CDL</p>
                                         </div>
                                     </a>
 
-                                    <a href="/estrutura/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../estrutura/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Estrutura</div>
                                             <p class="text-sm mb-0">Navegue pela nossa estrutura</p>
@@ -226,21 +237,21 @@ $totalPages_rsBlog_Outros = ceil($totalRows_rsBlog_Outros/$maxRows_rsBlog_Outros
 
                             <div class="dropdown-menu dropdown-menu-xl py-0 px-0 overflow--hidden" aria-labelledby="navbar_1_dropdown_1">
                                 <div class="list-group rounded">
-                                    <a href="/exames/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../exames/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Exames</div>
                                             <p class="text-sm mb-0">Dispomos de uma lista completa de exames.</p>
                                         </div>
                                     </a>
 
-                                    <a href="/checkup/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../checkup/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Check-ups</div>
                                             <p class="text-sm mb-0">Conheça e agende seu chekup conosco.</p>
                                         </div>
                                     </a>
 
-                                    <a href="/coleta-domiciliar/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../coleta-domiciliar/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Coleta Domiciliar</div>
                                             <p class="text-sm mb-0">Você faz diversos tipos de exames sem sair do conforto da sua casa.</p>
@@ -248,16 +259,12 @@ $totalPages_rsBlog_Outros = ceil($totalRows_rsBlog_Outros/$maxRows_rsBlog_Outros
                                     </a>
 
 
-                                    <a href="/convenios/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../convenios/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Convênios</div>
                                             <p class="text-sm mb-0">Somos credenciados pelos principais planos de saúde e empresas de Manaus.</p>
                                         </div>
-                                    </a>
-
-
-
-                                    
+                                    </a>                   
                                 </div>
                             </div>
                         </li>
@@ -266,9 +273,9 @@ $totalPages_rsBlog_Outros = ceil($totalRows_rsBlog_Outros/$maxRows_rsBlog_Outros
                           
                           
                           <li class="nav-item dropdown megamenu"> <a class="nav-link" href="http://cdlaboratorio.dyndns.org:8081/" target="_blank"> Resultados </a> </li>
-                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="/unidades/"> Unidades </a> </li>
-                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="/blog/"> Blog </a> </li>
-                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="/contato/"> Contato </a> </li>
+                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="../unidades/"> Unidades </a> </li>
+                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="../blog/"> Blog </a> </li>
+                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="../contato/"> Contato </a> </li>
                         </ul>
                         <!-- /Navbar links -->
 
@@ -276,7 +283,7 @@ $totalPages_rsBlog_Outros = ceil($totalRows_rsBlog_Outros/$maxRows_rsBlog_Outros
                           <!-- <li class="nav-item"> <a href="../content/documentation/getting-started/introduction.html" class="nav-link"> &Aacute;rea do Paciente </a> </li> -->
                         </ul>
                       </div>
-                      <div class="pl-4 d-none d-lg-inline-block"> <a href="/contato/" class="btn btn-styled btn-sm btn-base-3 btn-circle" target="_blank"> Fale com o CDL </a> </div>
+                      <div class="pl-4 d-none d-lg-inline-block"> <a href="../contato/" class="btn btn-styled btn-sm btn-base-3 btn-circle" target="_blank"> Fale com o CDL </a> </div>
                     </div>
                   </nav>
                 </div>
@@ -368,7 +375,7 @@ $totalPages_rsBlog_Outros = ceil($totalRows_rsBlog_Outros/$maxRows_rsBlog_Outros
                                 <div class="col-lg-4">
                                     <div class="block block-image-holder image-animate-wrapper">
                                         <div class="block-image image-animate--hover">
-                                            <a href="#">
+                                            <a href="d.php?id=<?php echo $row_rsBlog_Outros['DIC_COD']; ?>">
                                                 
                                                   <img src="../images/content/dicas/<?php echo $row_rsBlog_Outros['DIC_COD']; ?>.jpg">
                                                   
@@ -386,7 +393,7 @@ $totalPages_rsBlog_Outros = ceil($totalRows_rsBlog_Outros/$maxRows_rsBlog_Outros
                                 </div>
 
                                <!-- /item -->
-                               <?php } while ($row_rsBlog_Outros = mysql_fetch_assoc($rsBlog_Outros)); ?>
+                               <?php } while ($row_rsBlog_Outros = mysqli_fetch_assoc($rsBlog_Outros)); ?>
                                
 
                             </div>
@@ -398,8 +405,8 @@ $totalPages_rsBlog_Outros = ceil($totalRows_rsBlog_Outros/$maxRows_rsBlog_Outros
             <!-- InstanceEndEditable -->
             <!-- /conteudo_interno -->
 
-                    <!-- FOOTER -->
-                    <footer id="footer" class="footer">
+                     <!-- FOOTER -->
+                     <footer id="footer" class="footer">
     <div class="footer-top">
         <div class="container">
             <div class="row cols-xs-space cols-sm-space cols-md-space">
@@ -409,7 +416,7 @@ $totalPages_rsBlog_Outros = ceil($totalRows_rsBlog_Outros/$maxRows_rsBlog_Outros
                         <span class="clearfix"></span>
                         
                         <p class="mt-3">
-                            Uma história de pioneirismo, trabalho e dedicação iniciada por duas farmacêutica sem prol de oferecer à  população amazonense um laboratório de análises clínicas e citológicas que se destaca pela qualidade nos procedimentos e pelo atendimento humanizado e diferenciado.
+                            Uma história de pioneirismo, trabalho e dedicação iniciada por duas farmacêutica sem prol de oferecer à  população amazonense um laboratório de anàlises clà­nicas e citológicas que se destaca pela qualidade nos procedimentos e pelo atendimento humanizado e diferenciado.
                         </p>
 
                         <div class="copyright mt-4">
@@ -431,11 +438,11 @@ $totalPages_rsBlog_Outros = ceil($totalRows_rsBlog_Outros/$maxRows_rsBlog_Outros
                        </h4>
 
                        <ul class="footer-links">
-                            <li><a href="../index.html" title="Help center">Home</a></li>
-                            <li><a href="/sobre/" title="Nosso Propósito">Nosso Prop&oacute;sito</a></li>
-                            <li><a href="/unidades/" title="Conheça nossas unidades em Manaus">Unidades CDL</a></li>
-                            <li><a href="/blog/" title="Blog">Blog</a></li>
-                            <li><a href="/contato/" title="Contato">Contato</a></li>
+                            <li><a href="../index.php" title="Help center">Home</a></li>
+                            <li><a href="../sobre/" title="Nosso Propósito">Nosso Prop&oacute;sito</a></li>
+                            <li><a href="../unidades/" title="Conheça nossas unidades em Manaus">Unidades CDL</a></li>
+                            <li><a href="../blog/" title="Blog">Blog</a></li>
+                            <li><a href="../contato/" title="Contato">Contato</a></li>
                         </ul>
                      </div>
                 </div>
@@ -443,27 +450,27 @@ $totalPages_rsBlog_Outros = ceil($totalRows_rsBlog_Outros/$maxRows_rsBlog_Outros
                 <div class="col-lg-2">
                     <div class="col">
                         <h4 class="heading heading-xs strong-600 text-uppercase mb-1">
-                            Exames & Serviços
+                            Exames & Servi&ccedil;os
                         </h4>
 
                         <ul class="footer-links">
                              <li>
-                                 <a href="#" title="Lista de todos nossos exames">
+                                 <a href="../exames/" title="Lista de todos nossos exames">
                                      Exames
                                  </a>
                              </li>
                              <li>
-                                 <a href="/checkups/" title="Checkups">
+                                 <a href="../checkups/" title="Checkups">
                                      Check Ups
                                  </a>
                              </li>
                              <li>
-                                 <a href="/convenios/" title="Convênios">
-                                     Convênios
+                                 <a href="../convenios/" title="Convênios">
+                                     Conv&ecirc;nios
                                  </a>
                              </li>
                              <li>
-                                 <a href="#" title="Coleta Domiciliar">
+                                 <a href="../coleta-domiciliar/" title="Coleta Domiciliar">
                                      Coleta Domiciliar
                                  </a>
                              </li>
@@ -564,7 +571,7 @@ $totalPages_rsBlog_Outros = ceil($totalRows_rsBlog_Outros/$maxRows_rsBlog_Outros
 </body>
 <!-- InstanceEnd --></html>
 <?php
-mysql_free_result($rsBlog_Detail);
+mysqli_free_result($rsBlog_Detail);
 
-mysql_free_result($rsBlog_Outros);
+mysqli_free_result($rsBlog_Outros);
 ?>

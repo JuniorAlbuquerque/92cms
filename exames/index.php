@@ -209,7 +209,7 @@ s0.parentNode.insertBefore(s1,s0);
                                         </div>
                                     </a>
 
-                                    <a href="/estrutura/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../estrutura/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Estrutura</div>
                                             <p class="text-sm mb-0">Navegue pela nossa estrutura</p>
@@ -229,21 +229,21 @@ s0.parentNode.insertBefore(s1,s0);
 
                             <div class="dropdown-menu dropdown-menu-xl py-0 px-0 overflow--hidden" aria-labelledby="navbar_1_dropdown_1">
                                 <div class="list-group rounded">
-                                    <a href="/exames/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../exames/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Exames</div>
                                             <p class="text-sm mb-0">Dispomos de uma lista completa de exames.</p>
                                         </div>
                                     </a>
 
-                                    <a href="/checkup/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../checkup/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Check-ups</div>
                                             <p class="text-sm mb-0">Conheça e agende seu chekup conosco.</p>
                                         </div>
                                     </a>
 
-                                    <a href="/coleta-domiciliar/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../coleta-domiciliar/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Coleta Domiciliar</div>
                                             <p class="text-sm mb-0">Você faz diversos tipos de exames sem sair do conforto da sua casa.</p>
@@ -251,16 +251,12 @@ s0.parentNode.insertBefore(s1,s0);
                                     </a>
 
 
-                                    <a href="/convenios/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../convenios/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Convênios</div>
                                             <p class="text-sm mb-0">Somos credenciados pelos principais planos de saúde e empresas de Manaus.</p>
                                         </div>
-                                    </a>
-
-
-
-                                    
+                                    </a>                   
                                 </div>
                             </div>
                         </li>
@@ -269,9 +265,9 @@ s0.parentNode.insertBefore(s1,s0);
                           
                           
                           <li class="nav-item dropdown megamenu"> <a class="nav-link" href="http://cdlaboratorio.dyndns.org:8081/" target="_blank"> Resultados </a> </li>
-                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="/unidades/"> Unidades </a> </li>
-                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="/blog/"> Blog </a> </li>
-                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="/contato/"> Contato </a> </li>
+                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="../unidades/"> Unidades </a> </li>
+                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="../blog/"> Blog </a> </li>
+                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="../contato/"> Contato </a> </li>
                         </ul>
                         <!-- /Navbar links -->
 
@@ -279,7 +275,7 @@ s0.parentNode.insertBefore(s1,s0);
                           <!-- <li class="nav-item"> <a href="../content/documentation/getting-started/introduction.html" class="nav-link"> &Aacute;rea do Paciente </a> </li> -->
                         </ul>
                       </div>
-                      <div class="pl-4 d-none d-lg-inline-block"> <a href="/contato/" class="btn btn-styled btn-sm btn-base-3 btn-circle" target="_blank"> Fale com o CDL </a> </div>
+                      <div class="pl-4 d-none d-lg-inline-block"> <a href="../contato/" class="btn btn-styled btn-sm btn-base-3 btn-circle" target="_blank"> Fale com o CDL </a> </div>
                     </div>
                   </nav>
                 </div>
@@ -337,10 +333,7 @@ s0.parentNode.insertBefore(s1,s0);
                                 
                             }
                             ?>
-                            <!-- /loop_alfabeto -->
-
-                            
-                            
+                            <!-- /loop_alfabeto -->           
                         </ul>
                     </nav>
                 </div>
@@ -414,7 +407,7 @@ s0.parentNode.insertBefore(s1,s0);
                                         </p>
 
                                         <div class="btn-container mt-5">
-                                            <a href="/contato/" class="btn btn-styled btn-base-5 btn-circle">Solicite Agora</a>
+                                            <a href="../contato/" class="btn btn-styled btn-base-5 btn-circle">Solicite Agora</a>
 
                                         </div>
                                     </div>
@@ -440,7 +433,7 @@ s0.parentNode.insertBefore(s1,s0);
                         <span class="clearfix"></span>
                         
                         <p class="mt-3">
-                            Uma história de pioneirismo, trabalho e dedicação iniciada por duas farmacêutica sem prol de oferecer à  população amazonense um laboratório de anà¡lises clà­nicas e citológicas que se destaca pela qualidade nos procedimentos e pelo atendimento humanizado e diferenciado.
+                            Uma história de pioneirismo, trabalho e dedicação iniciada por duas farmacêutica sem prol de oferecer à  população amazonense um laboratório de anàlises clà­nicas e citológicas que se destaca pela qualidade nos procedimentos e pelo atendimento humanizado e diferenciado.
                         </p>
 
                         <div class="copyright mt-4">
@@ -462,11 +455,11 @@ s0.parentNode.insertBefore(s1,s0);
                        </h4>
 
                        <ul class="footer-links">
-                            <li><a href="../index.html" title="Help center">Home</a></li>
-                            <li><a href="/sobre/" title="Nosso Propósito">Nosso Prop&oacute;sito</a></li>
-                            <li><a href="/unidades/" title="Conheça nossas unidades em Manaus">Unidades CDL</a></li>
-                            <li><a href="/blog/" title="Blog">Blog</a></li>
-                            <li><a href="/contato/" title="Contato">Contato</a></li>
+                            <li><a href="../index.php" title="Help center">Home</a></li>
+                            <li><a href="../sobre/" title="Nosso Propósito">Nosso Prop&oacute;sito</a></li>
+                            <li><a href="../unidades/" title="Conheça nossas unidades em Manaus">Unidades CDL</a></li>
+                            <li><a href="../blog/" title="Blog">Blog</a></li>
+                            <li><a href="../contato/" title="Contato">Contato</a></li>
                         </ul>
                      </div>
                 </div>
@@ -479,22 +472,22 @@ s0.parentNode.insertBefore(s1,s0);
 
                         <ul class="footer-links">
                              <li>
-                                 <a href="#" title="Lista de todos nossos exames">
+                                 <a href="../exames/" title="Lista de todos nossos exames">
                                      Exames
                                  </a>
                              </li>
                              <li>
-                                 <a href="/checkups/" title="Checkups">
+                                 <a href="../checkups/" title="Checkups">
                                      Check Ups
                                  </a>
                              </li>
                              <li>
-                                 <a href="/convenios/" title="Convênios">
+                                 <a href="../convenios/" title="Convênios">
                                      Conv&ecirc;nios
                                  </a>
                              </li>
                              <li>
-                                 <a href="#" title="Coleta Domiciliar">
+                                 <a href="../coleta-domiciliar/" title="Coleta Domiciliar">
                                      Coleta Domiciliar
                                  </a>
                              </li>
@@ -595,5 +588,5 @@ s0.parentNode.insertBefore(s1,s0);
 </body>
 <!-- InstanceEnd --></html>
 <?php
-mysql_free_result($rsExames);
+mysqli_free_result($rsExames);
 ?>

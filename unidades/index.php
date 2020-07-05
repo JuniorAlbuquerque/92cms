@@ -1,5 +1,6 @@
 <?php require_once('../Connections/conn92ID.php'); ?>
 <?php
+header('Content-Type: text/html; charset=utf-8');
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
 {
@@ -31,11 +32,11 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 }
 
-mysql_select_db($database_conn92ID, $conn92ID);
+mysqli_select_db($conn92ID, $database_conn92ID);
 $query_rsUnidades = "SELECT * FROM tb_lojas WHERE LOJ_STATUS = 1";
-$rsUnidades = mysql_query($query_rsUnidades, $conn92ID) or die(mysql_error());
-$row_rsUnidades = mysql_fetch_assoc($rsUnidades);
-$totalRows_rsUnidades = mysql_num_rows($rsUnidades);
+$rsUnidades = mysqli_query($conn92ID, $query_rsUnidades) or die(mysql_error($conn92ID));
+$row_rsUnidades = mysqli_fetch_assoc($rsUnidades);
+$totalRows_rsUnidades = mysqli_num_rows($rsUnidades);
 ?>
 <!DOCTYPE html>
 <html><!-- InstanceBegin template="/Templates/conteudo_interno.dwt" codeOutsideHTMLIsLocked="false" -->
@@ -45,11 +46,11 @@ $totalRows_rsUnidades = mysql_num_rows($rsUnidades);
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="robots" content="index, follow">
-<meta name="description" content="O melhor e mais completo serviços laboratoriais de Manaus.">
-<meta name="keywords" content="laboratório, laboratórios, exames, médicos, clínicas, saúde, hospitais, medicina, manaus, amazonas">
+<meta name="description" content="O melhor e mais completo serviï¿½os laboratoriais de Manaus.">
+<meta name="keywords" content="laboratï¿½rio, laboratï¿½rios, exames, mï¿½dicos, clï¿½nicas, saï¿½de, hospitais, medicina, manaus, amazonas">
 <meta name="author" content="92dpi.ag">
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Unidades « CDL Laboratórios Santos e Vidal - Manaus / Amazonas</title>
+<title>Unidades Â« CDL LaboratÃ³rios Santos e Vidal - Manaus / Amazonas</title>
 <!-- InstanceEndEditable -->
 <!-- Bootstrap -->
 <link rel="stylesheet" href="../content/assets/vendor/bootstrap/css/bootstrap.min.css" type="text/css">
@@ -188,8 +189,8 @@ s0.parentNode.insertBefore(s1,s0);
                         </div>
 
 
-                        <!-- Navbar links -->
-                        <ul class="navbar-nav">
+                  <!-- Navbar links -->
+                  <ul class="navbar-nav">
                           <li class="nav-item dropdown megamenu"> <a class="nav-link" href="../index.php"> Home </a> </li>
 
                         <!-- dropdown -->
@@ -200,14 +201,14 @@ s0.parentNode.insertBefore(s1,s0);
 
                             <div class="dropdown-menu dropdown-menu-xl py-0 px-0 overflow--hidden" aria-labelledby="navbar_1_dropdown_1">
                                 <div class="list-group rounded">
-                                    <a href="/sobre/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../sobre/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
-                                            <div class="list-group-heading heading heading-6 mb-1">Nosso Propósito</div>
-                                            <p class="text-sm mb-0">Conheça a trajetória do CDL</p>
+                                            <div class="list-group-heading heading heading-6 mb-1">Nosso PropÃ³sito</div>
+                                            <p class="text-sm mb-0">ConheÃ§a a trajetÃ³ria do CDL</p>
                                         </div>
                                     </a>
 
-                                    <a href="/estrutura/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../estrutura/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Estrutura</div>
                                             <p class="text-sm mb-0">Navegue pela nossa estrutura</p>
@@ -222,43 +223,39 @@ s0.parentNode.insertBefore(s1,s0);
                         <!-- dropdown -->
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                               Exames e Serviços
+                               Exames e ServiÃ§os
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-xl py-0 px-0 overflow--hidden" aria-labelledby="navbar_1_dropdown_1">
                                 <div class="list-group rounded">
-                                    <a href="/exames/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../exames/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Exames</div>
                                             <p class="text-sm mb-0">Dispomos de uma lista completa de exames.</p>
                                         </div>
                                     </a>
 
-                                    <a href="/checkup/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../checkup/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Check-ups</div>
-                                            <p class="text-sm mb-0">Conheça e agende seu chekup conosco.</p>
+                                            <p class="text-sm mb-0">ConheÃ§a e agende seu chekup conosco.</p>
                                         </div>
                                     </a>
 
-                                    <a href="/coleta-domiciliar/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../coleta-domiciliar/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Coleta Domiciliar</div>
-                                            <p class="text-sm mb-0">Você faz diversos tipos de exames sem sair do conforto da sua casa.</p>
+                                            <p class="text-sm mb-0">VocÃª faz diversos tipos de exames sem sair do conforto da sua casa.</p>
                                         </div>
                                     </a>
 
 
-                                    <a href="/convenios/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../convenios/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
-                                            <div class="list-group-heading heading heading-6 mb-1">Convênios</div>
-                                            <p class="text-sm mb-0">Somos credenciados pelos principais planos de saúde e empresas de Manaus.</p>
+                                            <div class="list-group-heading heading heading-6 mb-1">ConvÃªnios</div>
+                                            <p class="text-sm mb-0">Somos credenciados pelos principais planos de saÃºde e empresas de Manaus.</p>
                                         </div>
-                                    </a>
-
-
-
-                                    
+                                    </a>                   
                                 </div>
                             </div>
                         </li>
@@ -267,9 +264,9 @@ s0.parentNode.insertBefore(s1,s0);
                           
                           
                           <li class="nav-item dropdown megamenu"> <a class="nav-link" href="http://cdlaboratorio.dyndns.org:8081/" target="_blank"> Resultados </a> </li>
-                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="/unidades/"> Unidades </a> </li>
-                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="/blog/"> Blog </a> </li>
-                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="/contato/"> Contato </a> </li>
+                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="../unidades/"> Unidades </a> </li>
+                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="../blog/"> Blog </a> </li>
+                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="../contato/"> Contato </a> </li>
                         </ul>
                         <!-- /Navbar links -->
 
@@ -277,7 +274,7 @@ s0.parentNode.insertBefore(s1,s0);
                           <!-- <li class="nav-item"> <a href="../content/documentation/getting-started/introduction.html" class="nav-link"> &Aacute;rea do Paciente </a> </li> -->
                         </ul>
                       </div>
-                      <div class="pl-4 d-none d-lg-inline-block"> <a href="/contato/" class="btn btn-styled btn-sm btn-base-3 btn-circle" target="_blank"> Fale com o CDL </a> </div>
+                      <div class="pl-4 d-none d-lg-inline-block"> <a href="../contato/" class="btn btn-styled btn-sm btn-base-3 btn-circle" target="_blank"> Fale com o CDL </a> </div>
                     </div>
                   </nav>
                 </div>
@@ -292,7 +289,7 @@ s0.parentNode.insertBefore(s1,s0);
                         <div class="py-5 text-center">
                           <h1 class="heading heading-1 c-white strong-400 text-normal"> Unidades CDL Manaus </h1>
                           <span class="clearfix"></span>
-                          <div class="fluid-paragraph fluid-paragraph-sm c-gray-light strong-300 text-center c-white mt-3"> Hoje com sete unidades, emprega 55 profissionais diretos que trabalham a partir do propósito: “Amamos Cuidar de Você”. </div>
+                          <div class="fluid-paragraph fluid-paragraph-sm c-gray-light strong-300 text-center c-white mt-3"> Hoje com sete unidades, emprega 55 profissionais diretos que trabalham a partir do propÃ³sito: Amamos Cuidar de VocÃª. </div>
                         </div>
                       </div>
                     </div>
@@ -343,7 +340,7 @@ s0.parentNode.insertBefore(s1,s0);
                         </div>
                       </div>
                     </section>
-                  <?php } while ($row_rsUnidades = mysql_fetch_assoc($rsUnidades)); ?>
+                  <?php } while ($row_rsUnidades = mysqli_fetch_assoc($rsUnidades)); ?>
 					<!-- /item -->
 
             
@@ -356,12 +353,12 @@ s0.parentNode.insertBefore(s1,s0);
         <div class="container">
             <div class="row cols-xs-space cols-sm-space cols-md-space">
                 <div class="col-lg-5">
-                    <div class="col">
+                <div class="col">
                         <img src="../content/assets/images/logo/logo-1-c.png">
                         <span class="clearfix"></span>
                         
                         <p class="mt-3">
-                            Uma história de pioneirismo, trabalho e dedicação iniciada por duas farmacêutica sem prol de oferecer à  população amazonense um laboratório de anà¡lises clà­nicas e citológicas que se destaca pela qualidade nos procedimentos e pelo atendimento humanizado e diferenciado.
+                            Uma histÃ³ria de pioneirismo, trabalho e dedicaÃ§Ã£o iniciada por duas farmacÃªutica sem prol de oferecer Ã   populaÃ§Ã£o amazonense um laboratÃ³rio de anÃ lises clÃ Â­nicas e citolÃ³gicas que se destaca pela qualidade nos procedimentos e pelo atendimento humanizado e diferenciado.
                         </p>
 
                         <div class="copyright mt-4">
@@ -371,7 +368,7 @@ s0.parentNode.insertBefore(s1,s0);
                                 </a> -
                                 Todos os direitos reservados.
                             </p>
-                            <a href="http://www.92dpi.ag" target="_blank" title="92dpi | Agência Digital"><img src="http://www.92dpi.ag/images/webservices/92dpi-30px-w.png" alt="92dpi | Agência Digital" /></a>
+                            <a href="http://www.92dpi.ag" target="_blank" title="92dpi | AgÃªncia Digital"><img src="http://www.92dpi.ag/images/webservices/92dpi-30px-w.png" alt="92dpi | AgÃªncia Digital" /></a>
                         </div>
                     </div>
                 </div>
@@ -384,10 +381,10 @@ s0.parentNode.insertBefore(s1,s0);
 
                        <ul class="footer-links">
                             <li><a href="../index.html" title="Help center">Home</a></li>
-                            <li><a href="/sobre/" title="Nosso Propósito">Nosso Prop&oacute;sito</a></li>
-                            <li><a href="/unidades/" title="Conheça nossas unidades em Manaus">Unidades CDL</a></li>
-                            <li><a href="/blog/" title="Blog">Blog</a></li>
-                            <li><a href="/contato/" title="Contato">Contato</a></li>
+                            <li><a href="../sobre/" title="Nosso PropÃ³sito">Nosso Prop&oacute;sito</a></li>
+                            <li><a href="../unidades/" title="ConheÃ§a nossas unidades em Manaus">Unidades CDL</a></li>
+                            <li><a href="../blog/" title="Blog">Blog</a></li>
+                            <li><a href="../contato/" title="Contato">Contato</a></li>
                         </ul>
                      </div>
                 </div>
@@ -400,22 +397,22 @@ s0.parentNode.insertBefore(s1,s0);
 
                         <ul class="footer-links">
                              <li>
-                                 <a href="#" title="Lista de todos nossos exames">
+                                 <a href="../exames/" title="Lista de todos nossos exames">
                                      Exames
                                  </a>
                              </li>
                              <li>
-                                 <a href="/checkups/" title="Checkups">
+                                 <a href="../checkups/" title="Checkups">
                                      Check Ups
                                  </a>
                              </li>
                              <li>
-                                 <a href="/convenios/" title="Convênios">
+                                 <a href="../convenios/" title="ConvÃªnios">
                                      Conv&ecirc;nios
                                  </a>
                              </li>
                              <li>
-                                 <a href="#" title="Coleta Domiciliar">
+                                 <a href="../coleta-domiciliar/" title="Coleta Domiciliar">
                                      Coleta Domiciliar
                                  </a>
                              </li>
@@ -516,5 +513,5 @@ s0.parentNode.insertBefore(s1,s0);
 </body>
 <!-- InstanceEnd --></html>
 <?php
-mysql_free_result($rsUnidades);
+mysqli_free_result($rsUnidades);
 ?>

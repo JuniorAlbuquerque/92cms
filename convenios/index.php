@@ -42,7 +42,7 @@ $totalRows_rsConvenios = mysqli_num_rows($rsConvenios);
 <html><!-- InstanceBegin template="/Templates/conteudo_interno.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 
-<meta charset="iso-8859-1">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="robots" content="index, follow">
@@ -50,7 +50,7 @@ $totalRows_rsConvenios = mysqli_num_rows($rsConvenios);
 <meta name="keywords" content="laborat�rio, laborat�rios, exames, m�dicos, cl�nicas, sa�de, hospitais, medicina, manaus, amazonas">
 <meta name="author" content="92dpi.ag">
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Convênios - CDL Laboratórios Santos e Vidal - Manaus / Amazonas</title>
+<title>Convênios « CDL Laboratórios Santos e Vidal - Manaus / Amazonas</title>
 <!-- InstanceEndEditable -->
 <!-- Bootstrap -->
 <link rel="stylesheet" href="../content/assets/vendor/bootstrap/css/bootstrap.min.css" type="text/css">
@@ -200,14 +200,14 @@ s0.parentNode.insertBefore(s1,s0);
 
                             <div class="dropdown-menu dropdown-menu-xl py-0 px-0 overflow--hidden" aria-labelledby="navbar_1_dropdown_1">
                                 <div class="list-group rounded">
-                                    <a href="/sobre/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../sobre/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Nosso Propósito</div>
                                             <p class="text-sm mb-0">Conheça a trajetória do CDL</p>
                                         </div>
                                     </a>
 
-                                    <a href="/estrutura/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../estrutura/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Estrutura</div>
                                             <p class="text-sm mb-0">Navegue pela nossa estrutura</p>
@@ -227,38 +227,34 @@ s0.parentNode.insertBefore(s1,s0);
 
                             <div class="dropdown-menu dropdown-menu-xl py-0 px-0 overflow--hidden" aria-labelledby="navbar_1_dropdown_1">
                                 <div class="list-group rounded">
-                                    <a href="/exames/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../exames/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Exames</div>
                                             <p class="text-sm mb-0">Dispomos de uma lista completa de exames.</p>
                                         </div>
                                     </a>
 
-                                    <a href="/checkup/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../checkup/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Check-ups</div>
-                                            <p class="text-sm mb-0">Conhe�a e agende seu chekup conosco.</p>
+                                            <p class="text-sm mb-0">Conheça e agende seu chekup conosco.</p>
                                         </div>
                                     </a>
 
-                                    <a href="/coleta-domiciliar/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../coleta-domiciliar/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Coleta Domiciliar</div>
-                                            <p class="text-sm mb-0">Voc� faz diversos tipos de exames sem sair do conforto da sua casa.</p>
+                                            <p class="text-sm mb-0">Você faz diversos tipos de exames sem sair do conforto da sua casa.</p>
                                         </div>
                                     </a>
 
 
-                                    <a href="/convenios/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../convenios/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
-                                            <div class="list-group-heading heading heading-6 mb-1">Conv�nios</div>
-                                            <p class="text-sm mb-0">Somos credenciados pelos principais planos de sa�de e empresas de Manaus.</p>
+                                            <div class="list-group-heading heading heading-6 mb-1">Convênios</div>
+                                            <p class="text-sm mb-0">Somos credenciados pelos principais planos de saúde e empresas de Manaus.</p>
                                         </div>
                                     </a>
-
-
-
-                                    
                                 </div>
                             </div>
                         </li>
@@ -267,9 +263,9 @@ s0.parentNode.insertBefore(s1,s0);
                           
                           
                           <li class="nav-item dropdown megamenu"> <a class="nav-link" href="http://cdlaboratorio.dyndns.org:8081/" target="_blank"> Resultados </a> </li>
-                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="/unidades/"> Unidades </a> </li>
-                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="/blog/"> Blog </a> </li>
-                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="/contato/"> Contato </a> </li>
+                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="../unidades/"> Unidades </a> </li>
+                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="../blog/"> Blog </a> </li>
+                          <li class="nav-item dropdown megamenu"> <a class="nav-link" href="../contato/"> Contato </a> </li>
                         </ul>
                         <!-- /Navbar links -->
 
@@ -277,7 +273,7 @@ s0.parentNode.insertBefore(s1,s0);
                           <!-- <li class="nav-item"> <a href="../content/documentation/getting-started/introduction.html" class="nav-link"> &Aacute;rea do Paciente </a> </li> -->
                         </ul>
                       </div>
-                      <div class="pl-4 d-none d-lg-inline-block"> <a href="/contato/" class="btn btn-styled btn-sm btn-base-3 btn-circle" target="_blank"> Fale com o CDL </a> </div>
+                      <div class="pl-4 d-none d-lg-inline-block"> <a href="../contato/" class="btn btn-styled btn-sm btn-base-3 btn-circle" target="_blank"> Fale com o CDL </a> </div>
                     </div>
                   </nav>
                 </div>
@@ -290,9 +286,9 @@ s0.parentNode.insertBefore(s1,s0);
                     <div class="row">
                       <div class="col-12">
                         <div class="py-5 text-center">
-                          <h1 class="heading heading-1 c-white strong-400 text-normal"> Nossos Conv�nios </h1>
+                          <h1 class="heading heading-1 c-white strong-400 text-normal"> Nossos Convênios </h1>
                           <span class="clearfix"></span>
-                          <div class="fluid-paragraph fluid-paragraph-sm c-gray-light strong-300 text-center c-white mt-3"> O CDL Laborat�rio � credenciado pelos principais planos de sa�de e empresas de Manaus. Para o atendimento nas unidades, � imprescind�vel a apresenta��o de um documento de identidade com foto e o cart�o de conv�nio m�dico.  </div>
+                          <div class="fluid-paragraph fluid-paragraph-sm c-gray-light strong-300 text-center c-white mt-3"> O CDL Laboratório é credenciado pelos principais planos de saúde e empresas de Manaus. Para o atendimento nas unidades, é imprescindível a apresentação de um documento de identidade com foto e o cartão de convênio médico.  </div>
                         </div>
                       </div>
                     </div>
@@ -305,7 +301,7 @@ s0.parentNode.insertBefore(s1,s0);
                         <div class="container">
                             <div class="section-title section-title--style-1 text-center mb-2">
                                 <h3 class="section-title-inner heading-2 text-normal">
-                                    Conhe�a as Empresas
+                                    Conheça as Empresas
                                 </h3>
                                 <span class="section-title-delimiter clearfix d-none"></span>
                             </div>
@@ -313,7 +309,7 @@ s0.parentNode.insertBefore(s1,s0);
                             <span class="clearfix"></span>
 
                             <div class="fluid-paragraph fluid-paragraph-sm text-center">
-                                <p class="text-lg c-gray-light">Os planos de sa�de que atendemos e as empresas parceiras do CDL voc� encontra aqui. </p>
+                                <p class="text-lg c-gray-light">Os planos de saúde que atendemos e as empresas parceiras do CDL você encontra aqui. </p>
                             </div>
 
                             <span class="space-xs-xl"></span>
@@ -324,7 +320,7 @@ s0.parentNode.insertBefore(s1,s0);
                                         <div class="figure block-image">
                                             <div class="view view-first">
                                                 <a href="#">
-                                                    <img src="/images/content/convenios/prv/clients/client-1.png">
+                                                    <img src="../images/content/convenios/client-2.png">
                                                 </a>
                                             </div>
 
@@ -343,11 +339,11 @@ s0.parentNode.insertBefore(s1,s0);
                                   <div class="col-lg-3 col-md-6">
                                     <div class="block block--style-3 block--style-3-v2">
                                       <div class="figure block-image">
-                                        <div class="view view-first"> <a href="<?php echo $row_rsConvenios['CONV_URL']; ?>" target="_blank" > <img src="/images/content/convenios/<?php echo $row_rsConvenios['CONV_COD']; ?>.png"> </a> </div>
+                                        <div class="view view-first"> <a href="<?php echo $row_rsConvenios['CONV_URL']; ?>" target="_blank" > <img src="../images/content/convenios/<?php echo $row_rsConvenios['CONV_COD']; ?>.png"> </a> </div>
                                       </div>
                                     </div>
                                   </div>
-                                  <?php } while ($row_rsConvenios = mysql_fetch_assoc($rsConvenios)); ?>
+                                  <?php } while ($row_rsConvenios = mysqli_fetch_assoc($rsConvenios)); ?>
                                   <!-- /item -->
 
                             </div>
@@ -367,7 +363,7 @@ s0.parentNode.insertBefore(s1,s0);
                                     </h3>
 
                                     <p class="text-md">
-                                        Fechamos parceria com empresas p�blicas e privadas, independente de porte ou segmento de atua��o, e profissionais da �rea da sa�de, como m�dicos e nutricionistas, com propostas personalizadas conforme os servi�os e as necessidades apresentadas ao laborat�rio.
+                                        Fechamos parceria com empresas públicas e privadas, independente de porte ou segmento de atuação, e profissionais da área da saúde, como médicos e nutricionistas, com propostas personalizadas conforme os serviços e as necessidades apresentadas ao laboratório.
                                     </p>
 
                                     <span class="space-xs-md"></span>
@@ -377,7 +373,7 @@ s0.parentNode.insertBefore(s1,s0);
                                     </h3>
 
                                     <p class="text-md">
-                                        Ao se tornar empresa associada ou profissional parceiro, ser� proporcionado aos seus clientes ou funcion�rios um atendimento humanizado, realizando seus exames com qualidade, confiabilidade, seguran�a e rapidez. Nossa atua��o � pautada nos valores: comprometimento, humaniza��o, integridade e companheirismo.
+                                        Ao se tornar empresa associada ou profissional parceiro, será proporcionado aos seus clientes ou funcionários um atendimento humanizado, realizando seus exames com qualidade, confiabilidade, segurança e rapidez. Nossa atuação é pautada nos valores: comprometimento, humanização, integridade e companheirismo.
                                     </p>
 
                                     <span class="space-xs-md"></span>
@@ -387,14 +383,14 @@ s0.parentNode.insertBefore(s1,s0);
                                     </h3>
 
                                     <p class="text-md ">
-                                        A empresa ou o profissional interessado deve entrar em contato com o servi�o de SAC e um dos nossos funcion�rios do setor comercial ir� at� voc� ou ao endere�o do seu estabelecimento para verificar os exames laboratoriais e outros procedimentos. � realizada uma proposta personalizada com base na demanda e no que foi exposto ao laborat�rio.
+                                        A empresa ou o profissional interessado deve entrar em contato com o serviço de SAC e um dos nossos funcionários do setor comercial irá até você ou ao endereço do seu estabelecimento para verificar os exames laboratoriais e outros procedimentos. É realizada uma proposta personalizada com base na demanda e no que foi exposto ao laboratório.
                                     </p>
 
                                     
 
                                     <span class="space-xs-md"></span>
 
-                                    <a href="/contato/" class="btn btn-styled btn-lg btn-base-1">Solicite uma proposta</a>
+                                    <a href="../contato/" class="btn btn-styled btn-lg btn-base-1">Solicite uma proposta</a>
                                 </div>
                             </div>
                         </div>
@@ -414,7 +410,7 @@ s0.parentNode.insertBefore(s1,s0);
                         <span class="clearfix"></span>
                         
                         <p class="mt-3">
-                            Uma hist�ria de pioneirismo, trabalho e dedica��o iniciada por duas farmac�utica sem prol de oferecer �  popula��o amazonense um laborat�rio de an�lises cl�nicas e citol�gicas que se destaca pela qualidade nos procedimentos e pelo atendimento humanizado e diferenciado.
+                        Uma história de pioneirismo, trabalho e dedicação iniciada por duas farmacêutica sem prol de oferecer à  população amazonense um laboratório de anàlises clà­nicas e citológicas que se destaca pela qualidade nos procedimentos e pelo atendimento humanizado e diferenciado.
                         </p>
 
                         <div class="copyright mt-4">
@@ -436,11 +432,11 @@ s0.parentNode.insertBefore(s1,s0);
                        </h4>
 
                        <ul class="footer-links">
-                            <li><a href="../index.html" title="Help center">Home</a></li>
-                            <li><a href="/sobre/" title="Nosso Prop�sito">Nosso Prop&oacute;sito</a></li>
-                            <li><a href="/unidades/" title="Conhe�a nossas unidades em Manaus">Unidades CDL</a></li>
-                            <li><a href="/blog/" title="Blog">Blog</a></li>
-                            <li><a href="/contato/" title="Contato">Contato</a></li>
+                            <li><a href="../index.php" title="Help center">Home</a></li>
+                            <li><a href="../sobre/" title="Nosso Propósito">Nosso Prop&oacute;sito</a></li>
+                            <li><a href="../unidades/" title="Conheça nossas unidades em Manaus">Unidades CDL</a></li>
+                            <li><a href="../blog/" title="Blog">Blog</a></li>
+                            <li><a href="../contato/" title="Contato">Contato</a></li>
                         </ul>
                      </div>
                 </div>
@@ -453,22 +449,22 @@ s0.parentNode.insertBefore(s1,s0);
 
                         <ul class="footer-links">
                              <li>
-                                 <a href="#" title="Lista de todos nossos exames">
+                                 <a href="../exames" title="Lista de todos nossos exames">
                                      Exames
                                  </a>
                              </li>
                              <li>
-                                 <a href="/checkups/" title="Checkups">
+                                 <a href="../checkups/" title="Checkups">
                                      Check Ups
                                  </a>
                              </li>
                              <li>
-                                 <a href="/convenios/" title="Conv�nios">
+                                 <a href="../convenios/" title="Conv�nios">
                                      Conv&ecirc;nios
                                  </a>
                              </li>
                              <li>
-                                 <a href="#" title="Coleta Domiciliar">
+                                 <a href="../coleta-domiciliar" title="Coleta Domiciliar">
                                      Coleta Domiciliar
                                  </a>
                              </li>
