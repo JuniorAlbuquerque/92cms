@@ -44,7 +44,7 @@ $totalRows_rsExames = mysqli_num_rows($rsExames);
 <html><!-- InstanceBegin template="/Templates/conteudo_interno.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 
-<meta charset="iso-8859-1">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="robots" content="index, follow">
@@ -202,7 +202,7 @@ s0.parentNode.insertBefore(s1,s0);
 
                             <div class="dropdown-menu dropdown-menu-xl py-0 px-0 overflow--hidden" aria-labelledby="navbar_1_dropdown_1">
                                 <div class="list-group rounded">
-                                    <a href="/sobre/" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <a href="../sobre/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
                                             <div class="list-group-heading heading heading-6 mb-1">Nosso Propósito</div>
                                             <p class="text-sm mb-0">Conheça a trajetória do CDL</p>
@@ -384,7 +384,7 @@ s0.parentNode.insertBefore(s1,s0);
                                                 </div>
                                               </div>
                                           </div>
-                                          <?php } while ($row_rsExames = mysql_fetch_assoc($rsExames)); ?>
+                                          <?php } while ($row_rsExames = mysqli_fetch_assoc($rsExames)); ?>
 <!-- /item -->
                                         
                                     </div>

@@ -579,7 +579,7 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
           <?php do { ?>
             <!-- slide -->
             <div class="swiper-slide" data-swiper-autoplay="8000">
-              <div class="slice holder-item holder-item-light has-bg-cover bg-size-cover" style="background-image: url(http://p0341.92id.com.br/images/content/publicidade/<?php echo $row_rsPublicidade['PUB_COD']; ?>.jpg); background-position: bottom center;">
+              <div class="slice holder-item holder-item-light has-bg-cover bg-size-cover" style="background-image: url(images/content/publicidade/3.jpg); background-position: bottom center;">
                 <span class="mask mask-dark--style-2"></span>
                 <div class="container d-flex align-items-center">
                   <div class="col">
@@ -602,7 +602,7 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
                 </div>
             </div>
             <!-- /slide -->
-            <?php } while ($row_rsPublicidade = mysql_fetch_assoc($rsPublicidade)); ?>
+            <?php } while ($row_rsPublicidade = mysqli_fetch_assoc($rsPublicidade)); ?>
 			
 			
 <!-- slide -->
@@ -751,11 +751,11 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
                                 <div class="col-lg-6 d-none d-lg-block">
                                     <div class="row">
                                         <div class="col-md-6 animate-on-scroll fadeInDown" data-wow-delay="0.3s">
-                                            <img src="/images/estatico/sobre-img-slice-1a.jpg" class="img-fluid">
+                                            <img src="images/estatico/sobre-img-slice-1a.jpg" class="img-fluid">
                                         </div>
 
                                         <div class="col-md-6 mt-100 animate-on-scroll fadeInUp" data-wow-delay="0.3s">
-                                            <img src="/images/estatico/sobre-img-slice-1b.jpg" class="img-fluid">
+                                            <img src="images/estatico/sobre-img-slice-1b.jpg" class="img-fluid">
                                         </div>
                                     </div>
                                 </div>
@@ -838,7 +838,7 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
                                 </div>
 
                                 <div class="col-lg-4 col-12 hidden-md-down">
-                                    <img src="/images/estatico/motivos-cdl-1.png" class="img-center img-responsive">
+                                    <img src="images/estatico/motivos-cdl-1.png" class="img-center img-responsive">
                                 </div>
 
                                 <div class="col-lg-4 col-md-6 col-12">
@@ -915,7 +915,7 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
                                               <div class="client-logo client-logo--style-3"> <img src="images/content/convenios/<?php echo $row_rsConvenios['CONV_COD']; ?>.png" class="img-responsive" /></div>
                                               
                                         </div>
-                                        <?php } while ($row_rsConvenios = mysql_fetch_assoc($rsConvenios)); ?>
+                                        <?php } while ($row_rsConvenios = mysqli_fetch_assoc($rsConvenios)); ?>
 
                                     </div>
                                 </div>
@@ -988,7 +988,7 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
                                         <div class="swiper-slide">
                                             <div class="block block--style-5 no-radius">
                                                 <div class="block-image">
-                                                    <img src="/images/content/lojas/<?php echo $row_rsUnidades['LOJ_COD']; ?>.jpg">
+                                                    <img src="images/content/lojas/<?php echo $row_rsUnidades['LOJ_COD']; ?>.jpg">
                                                 </div>
                                                 <div class="block-mask-caption--over d-flex align-items-center">
                                                     <div class="col text-center">
@@ -1011,7 +1011,7 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
                                             </div>
                                         </div>
                                         <!-- /item -->
-                                        <?php } while ($row_rsUnidades = mysql_fetch_assoc($rsUnidades)); ?>
+                                        <?php } while ($row_rsUnidades = mysqli_fetch_assoc($rsUnidades)); ?>
                                         
                                     </div>
                                     <!-- Add Pagination -->
@@ -1062,7 +1062,7 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
                                             </div>
                                         </div>
                                         <!-- /item -->
-                                         <?php } while ($row_rsDepomeimentos = mysql_fetch_assoc($rsDepomeimentos)); ?>
+                                         <?php } while ($row_rsDepomeimentos = mysqli_fetch_assoc($rsDepomeimentos)); ?>
                                         
                                     </div>
 
@@ -1081,7 +1081,7 @@ $totalPages_rsPublicidade = ceil($totalRows_rsPublicidade/$maxRows_rsPublicidade
             <div class="row cols-xs-space cols-sm-space cols-md-space">
                 <div class="col-lg-5">
                     <div class="col">
-                        <img src="../content/assets/images/logo/logo-1-c.png">
+                        <img src="content/assets/images/logo/logo-1-c.png">
                         <span class="clearfix"></span>
                         
                         <p class="mt-3">
