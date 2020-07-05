@@ -8,7 +8,7 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
     $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
   }
 
-  $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
+  $theValue = function_exists("mysql_real_escape_string") ? mysqli_real_escape_string($theValue) : mysqli_escape_string($theValue);
 
   switch ($theType) {
     case "text":
@@ -33,7 +33,7 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 
 mysqli_select_db($conn92ID, $database_conn92ID);
-$query_rsCheckups = "SELECT * FROM vw_produtos_servicos_tipo WHERE PRDT_COD = 1";
+$query_rsCheckups = "SELECT * FROM vw_produtos_servicos_tipo WHERE PRD_COD = 1";
 $rsCheckups = mysqli_query($conn92ID, $query_rsCheckups) or die(mysqli_error($conn92ID));
 $row_rsCheckups = mysqli_fetch_assoc($rsCheckups);
 $totalRows_rsCheckups = mysqli_num_rows($rsCheckups);

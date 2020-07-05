@@ -1,5 +1,6 @@
 <?php require_once('../Connections/conn92ID.php'); ?>
 <?php
+header ('Content-type: text/html; charset=UTF-8');
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
 {
@@ -49,7 +50,7 @@ $totalRows_rsConvenios = mysqli_num_rows($rsConvenios);
 <meta name="keywords" content="laborat�rio, laborat�rios, exames, m�dicos, cl�nicas, sa�de, hospitais, medicina, manaus, amazonas">
 <meta name="author" content="92dpi.ag">
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Conv�nios � CDL Laborat�rios Santos e Vidal - Manaus / Amazonas</title>
+<title>Convênios - CDL Laboratórios Santos e Vidal - Manaus / Amazonas</title>
 <!-- InstanceEndEditable -->
 <!-- Bootstrap -->
 <link rel="stylesheet" href="../content/assets/vendor/bootstrap/css/bootstrap.min.css" type="text/css">
@@ -201,8 +202,8 @@ s0.parentNode.insertBefore(s1,s0);
                                 <div class="list-group rounded">
                                     <a href="/sobre/" class="list-group-item list-group-item-action d-flex align-items-center">
                                         <div class="list-group-content">
-                                            <div class="list-group-heading heading heading-6 mb-1">Nosso Prop�sito</div>
-                                            <p class="text-sm mb-0">Conhe�a a trajet�ria do CDL</p>
+                                            <div class="list-group-heading heading heading-6 mb-1">Nosso Propósito</div>
+                                            <p class="text-sm mb-0">Conheça a trajetória do CDL</p>
                                         </div>
                                     </a>
 
@@ -221,7 +222,7 @@ s0.parentNode.insertBefore(s1,s0);
                         <!-- dropdown -->
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                               Exames e Servi�os
+                               Exames e Serviços
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-xl py-0 px-0 overflow--hidden" aria-labelledby="navbar_1_dropdown_1">

@@ -32,11 +32,11 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 }
 
-mysql_select_db($database_conn92ID, $conn92ID);
+mysqli_select_db($conn92ID, $database_conn92ID);
 $query_rsBlog = "SELECT * FROM vw_dicas_tipo WHERE DIC_STATUS = 1";
-$rsBlog = mysql_query($query_rsBlog, $conn92ID) or die(mysql_error());
-$row_rsBlog = mysql_fetch_assoc($rsBlog);
-$totalRows_rsBlog = mysql_num_rows($rsBlog);
+$rsBlog = mysqli_query($conn92ID, $query_rsBlog) or die(mysqli_error($conn92ID));
+$row_rsBlog = mysqli_fetch_assoc($rsBlog);
+$totalRows_rsBlog = mysqli_num_rows($rsBlog);
 ?>
 <!DOCTYPE html>
 <html><!-- InstanceBegin template="/Templates/conteudo_interno.dwt" codeOutsideHTMLIsLocked="false" -->
